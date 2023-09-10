@@ -1,0 +1,41 @@
+{
+  "name": "globotickets-vue",
+  "version": "1.0.0",
+  "private": true,
+  "license": "ISC",
+  "author": "Marko Vajs",
+  "scripts": {
+    "app": "npm run vue:build && node server/app.js",
+    "vue:build": "vue-cli-service build",
+    "vue:serve": "vue-cli-service serve"
+  },
+  "dependencies": {
+    "axios": "0.27.2",
+    "body-parser": "1.20.0",
+    "chalk": "4.1.2",
+    "connect-history-api-fallback": "2.0.0",
+    "core-js": "3.24.0",
+    "cors": "2.8.5",
+    "express": "4.18.1",
+    "moment": "2.29.4",
+    "mongodb-memory-server": "8.9.3",
+    "mongoose": "6.4.6",
+    "normalize.css": "8.0.1",
+    "vee-validate": "4.6.2",
+    "vue": "3.2.37",
+    "vue-router": "4.1.2",
+    "vue3-datepicker": "0.3.4",
+    "vuex": "4.0.2",
+    "yup": "0.32.11"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "5.0.8",
+    "@vue/cli-plugin-router": "5.0.8",
+    "@vue/cli-service": "5.0.8",
+    "@vue/compiler-sfc": "3.2.37",
+    "sass": "1.54.0",
+    "sass-loader": "13.0.2",
+    "style-resources-loader": "1.5.0",
+    "vue-cli-plugin-style-resources-loader": "0.1.5"
+  }
+}
