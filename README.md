@@ -14,6 +14,12 @@
 - screenshot and video
 - cross browser support
 
+##### Cypress Directories:
+- downloads: downloaded files during test execution
+- e2e: end to end tests
+- fixtures: statis files that are used in tests such as JSON files and images
+- support: to kee reuasable peices of code
+
 
 ##### Add Cypress to project:
 `npm i -D cypress`
@@ -46,3 +52,5 @@ run the cypress `npx cypress open`
 `///<reference types="Cypress" />`
 [mroe](https://stackoverflow.com/questions/52434223/lost-intellisense-for-cypress-in-visual-studio-code/52440156#52440156)
 
+
+- set baseUrl in cypress.confg.js, then you can just pass the route to `cy.visit('/about')`
