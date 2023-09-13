@@ -54,3 +54,16 @@ run the cypress `npx cypress open`
 
 
 - set baseUrl in cypress.confg.js, then you can just pass the route to `cy.visit('/about')`
+
+- we have `command` and `assertion`:
+
+``` js
+cy
+.get('#an-element') // command
+.should('be.visible') // assertion
+```
+- Cypress retries the commands that quey the DOM, like `.get()` `.find()` `.contains()`
+
+- Cypress only reties the last fialed command .
+
+- hooks are methods that run before or after test

@@ -9,7 +9,7 @@ describe('Create event',()=>{
 
     // go to create event form
     cy.get('[href="/create-event"]').should('be.visible').click()
-      // cy.contains('CREATE EVENT').should('be.visible')
+    cy.get('h2').should('have.text', 'Create Event')
       
     // fill-in the form
     cy.get('#event-name').type('Happy music Event')
@@ -25,9 +25,7 @@ describe('Create event',()=>{
     cy.get('#create-btn').click()
 
     // Assert new event had been created
-    cy.contains('EVENT DETAILS').should('be.visible')
-
+    cy.get('h2').should('have.text', 'Event Details')
   })
-
 
 })

@@ -1,3 +1,5 @@
+/// <reference types="Cypress" />
+
 // ***********************************************
 // This example commands.js shows you how to
 // create various custom commands and overwrite
@@ -23,3 +25,18 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+
+Cypress.Commands.add('createEvent', (eventName)=>{
+  cy.request('POST', "api/event", {
+    name: eventName,
+    venue: 'Venueee',
+    date: '2025-6-11',
+    time: '12:00AM',
+    ticketQuantity: 100,
+    isCancelled: false,
+    image: './assets/event-1.jpg'
+  }).then(response => {
+    cy.visit(`event/${response.body._id}`)
+  })
+})
