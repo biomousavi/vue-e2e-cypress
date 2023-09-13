@@ -4,4 +4,8 @@ import store from './store'
 import router from './router'
 import 'normalize.css'
 
-createApp(App).use(router).use(store).mount('#app')
+const app = createApp(App).use(router).use(store).mount('#app')
+
+if (window.Cypress) {
+  window.__app__ = app
+}
